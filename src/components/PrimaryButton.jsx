@@ -30,7 +30,8 @@ const PrimaryButton = ({
     return (
         <button
             {...props}
-            className={`rounded-[40px] justify-center items-center inline-flex text-center font-semibold font-inter ${buttonStyles} ${bgColor} ${textColor} ${hoverBgColor} ${hoverTextColor} ${disabled && 'opacity-25'} ${className}`}
+            className={`rounded-[40px] justify-center items-center inline-flex text-center font-semibold font-inter ${buttonStyles} ${bgColor} ${textColor} ${hoverBgColor} ${hoverTextColor} ${disabled && 'opacity-25'
+                } ${className} transition transform active:scale-75 duration-500`}
             disabled={disabled}
         >
             {children}
