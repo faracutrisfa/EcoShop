@@ -5,10 +5,6 @@ import { RiShoppingBag4Line } from "react-icons/ri";
 import Logo from "../assets/Logo.webp";
 
 const Navbar = () => {
-    const handleClick = () => {
-        alert("Button clicked!");
-    };
-
     const navItems = [
         "NEW!", "Clothing", "Bath", "Bedding", "Home Goods",
         "Furniture", "Footwear", "Accessories"
@@ -35,7 +31,7 @@ const Navbar = () => {
                 </ul>
             </div>
 
-            <ul className='flex justify-center gap-2 py-4 text-grey-600'>
+            <ul className='lg:flex justify-center hidden gap-2 py-4 text-grey-600'>
                 {navItems.map((item, index) => (
                     <li key={index} className='py-2 px-4 font-semibold'>
                         {item}
