@@ -3,7 +3,6 @@ import { HiOutlineArrowRight } from "react-icons/hi";
 import { CgProfile } from "react-icons/cg";
 import { RiShoppingBag4Line } from "react-icons/ri";
 import Logo from "../assets/Logo.webp";
-import PrimaryButton from './PrimaryButton';
 
 const Navbar = () => {
     const handleClick = () => {
@@ -36,7 +35,7 @@ const Navbar = () => {
                 </ul>
             </div>
 
-            <ul className='flex justify-center gap-2 py-4'>
+            <ul className='flex justify-center gap-2 py-4 text-grey-600'>
                 {navItems.map((item, index) => (
                     <li key={index} className='py-2 px-4 font-semibold'>
                         {item}
