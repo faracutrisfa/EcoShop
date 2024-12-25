@@ -43,6 +43,7 @@ const Navbar = () => {
                     </li>
                 ))}
             </ul>
+            <div className="border-t-2 border-primary" />
         </section>
     );
 };
