@@ -9,7 +9,7 @@ export default {
       },
       colors: {
         primary: "#658C4A",
-        primaryDark: "#89BC68",
+        primaryLight: "#89BC68",
         secondary: "#E7CEC0",
       },
     },
