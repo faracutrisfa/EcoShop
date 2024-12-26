@@ -21,7 +21,7 @@ const Hero = () => {
 
     return (
         <section
-            className="relative px-4 lg:px-16 flex justify-center lg:justify-between items-center"
+            className="relative px-4 md:px-10 lg:px-16 flex justify-center lg:justify-between items-center"
             style={{
                 backgroundImage: isSmallScreen ? `url(${heroImage})` : 'none',
                 backgroundSize: 'cover',
@@ -32,9 +32,9 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-white opacity-[0.85]"></div>
             )}
 
-            <div className="space-y-6 text-center lg:text-start lg:pl-16 py-20 z-10">
+            <div className="space-y-6 text-center lg:text-start lg:pl-16 py-28 lg:py-20 z-10">
                 <motion.h1
-                    className="text-grey-600 font-bold text-4xl lg:text-5xl font-libre"
+                    className="text-grey-600 font-bold text-4xl xl:text-5xl font-libre"
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
@@ -43,7 +43,7 @@ const Hero = () => {
                 </motion.h1>
 
                 <motion.p
-                    className="text-grey-500 text-sm lg:text-xl font-inter leading-7"
+                    className="text-grey-500 text-sm xl:text-xl font-inter leading-7"
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, delay: 0.2 }}
