@@ -3,18 +3,18 @@ import { HiOutlineArrowRight } from "react-icons/hi";
 import { CgProfile } from "react-icons/cg";
 import { RiShoppingBag4Line } from "react-icons/ri";
 import { IoSearch, IoMenu, IoClose } from "react-icons/io5";
+import { motion } from "framer-motion";
 import Logo from "../assets/Logo.webp";
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const navItems = ["NEW!", "Clothing", "Bath", "Bedding", "Home Goods", "Furniture", "Footwear", "Accessories"];
-    const iconClass = 'text-[#666666] text-2xl lg:text-4xl';
+    const iconClass = 'text-grey-500 text-2xl lg:text-4xl';
 
     const SearchBar = ({ hiddenOnLarge = false }) => (
         <div
-            className={`lg:w-2/3 h-10 px-4 py-2 rounded-[40px] border border-[#cccccc] flex items-center gap-2 ${hiddenOnLarge ? 'lg:hidden' : 'hidden lg:flex'
-                }`}
+            className={`md:w-2/3 w-2/3 h-10 px-4 py-2 rounded-[40px] border border-[#cccccc] flex items-center gap-2 ${hiddenOnLarge ? 'lg:hidden' : 'hidden lg:flex'}`}
         >
             <IoSearch size={20} color="#999999" />
             <input
@@ -25,6 +25,25 @@ const Navbar = () => {
         </div>
     );
 
+    const menuVariants = {
+        hidden: {
+            opacity: 0,
+            height: 0,
+            transition: {
+                duration: 0.3,
+                ease: "easeInOut",
+            },
+        },
+        visible: {
+            opacity: 1,
+            height: "auto",
+            transition: {
+                duration: 0.5,
+                ease: "easeInOut",
+            },
+        },
+    };
+
     return (
         <section className="font-inter">
             <div className="flex items-center gap-2 py-4 justify-center bg-gradient-to-r from-primary to-primaryLight font-semibold text-xs lg:text-base text-white">
@@ -32,7 +51,7 @@ const Navbar = () => {
                 <HiOutlineArrowRight />
             </div>
 
-            <div className="px-4 lg:px-16 py-4 flex items-center justify-between">
+            <div className="px-4 md:px-10 lg:px-16 py-4 flex items-center justify-between">
                 <img src={Logo} alt="Logo" className="w-16 lg:w-24" />
                 <SearchBar />
                 <ul className="flex items-center gap-2 lg:gap-4">
@@ -41,7 +60,7 @@ const Navbar = () => {
                 </ul>
             </div>
 
-            <div className="px-4 lg:hidden lg:px-16 py-4 flex items-center justify-between">
+            <div className="px-4 md:px-10 lg:px-16 lg:hidden py-4 flex items-center justify-between">
                 <SearchBar hiddenOnLarge />
                 <div>
                     {isMenuOpen ? (
@@ -52,12 +71,9 @@ const Navbar = () => {
                 </div>
             </div>
 
-            <div className="border-t-2 border-primary lg:hidden" />
-
             <ul
                 id="menu"
-                className={`lg:flex justify-center lg:py-4 lg:gap-2 text-grey-600 ${isMenuOpen ? 'flex flex-col' : 'hidden'
-                    }`}
+                className="lg:flex justify-center hidden py-4 gap-2 text-grey-600"
             >
                 {navItems.map((item, index) => (
                     <li key={index} className="px-4 py-2 font-semibold">
@@ -65,6 +81,22 @@ const Navbar = () => {
                     </li>
                 ))}
             </ul>
+
+            <div className="border-t-2 border-primary lg:hidden" />
+
+            <motion.ul
+                id="menu"
+                className="lg:flex justify-center text-grey-600 overflow-hidden"
+                initial="hidden"
+                animate={isMenuOpen ? "visible" : "hidden"}
+                variants={menuVariants}
+            >
+                {navItems.map((item, index) => (
+                    <li key={index} className="px-4 md:px-10 py-2 font-semibold">
+                        {item}
+                    </li>
+                ))}
+            </motion.ul>
 
             <div className="border-t-2 border-primary hidden lg:block" />
         </section>
