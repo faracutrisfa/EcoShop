@@ -11,6 +11,7 @@ export default {
         primary: "#658C4A",
         primaryLight: "#89BC68",
         secondary: "#E7CEC0",
+        secondaryLight:"#FFEFE5",
         grey: {
           50: "#F5F5F5",
           100: "#E6E6E6",
