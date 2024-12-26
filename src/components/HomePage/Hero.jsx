@@ -21,7 +21,7 @@ const Hero = () => {
 
     return (
         <section
-            className="relative px-4 md:px-10 lg:px-16 flex justify-center lg:justify-between items-center"
+            className="relative px-4 md:px-10 lg:pl-16 flex justify-center lg:justify-between items-center"
             style={{
                 backgroundImage: isSmallScreen ? `url(${heroImage})` : 'none',
                 backgroundSize: 'cover',
