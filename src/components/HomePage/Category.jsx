@@ -7,7 +7,7 @@ const CategoryImage = ({ src, alt, className }) => (
 const Category = () => {
     return (
         <section>
-            <div className='flex flex-col xl:flex-row px-4 md:px-10 lg:px-16 py-20 gap-4 xl:gap-6 items-center justify-center'>
+            <div className='flex flex-col xl:flex-row px-4 md:px-10 lg:px-16 py-10 lg:py-20 gap-4 xl:gap-6 items-center justify-center'>
 
                 <CategoryImage
                     src="src/assets/category/clothing.webp"
