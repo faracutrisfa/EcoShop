@@ -1,18 +1,16 @@
 import React from 'react';
 
-const WhyCard = ({ image, title, description, className = '' }) => {
+const WhyCard = ({ Icon, title, description, className = '' }) => {
     return (
         <div className={`space-y-4 font-inter ${className}`}>
-            <img
-                src={image}
-                alt='image' 
-                className="w-8 lg:w-10"
-            />
-            <div className='w-[280px]'>
+            <div className="w-8 lg:w-10">
+                {Icon && <Icon className="text-primary lg:text-grey-400 text-3xl lg:text-6xl" />}
+            </div>
+            <div className="w-[280px]">
                 <h3 className="text-grey-600 text-sm lg:text-xl font-semibold leading-tight lg:leading-7">
                     {title}
                 </h3>
-                <p className="text-grey-500 text-sm lg:text-xl leading-tight lg:leading-7">
+                <p className="text-grey-500 text-sm lg:text-xl leading-tight lg:leading-7 w-2/3 lg:w-full">
                     {description}
                 </p>
             </div>
