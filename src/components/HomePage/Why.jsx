@@ -7,7 +7,7 @@ import { RiCustomerService2Fill } from 'react-icons/ri';
 const Why = () => {
     return (
         <section aria-labelledby="why-us">
-            <div className="px-4 lg:px-16 py-20 lg:py-40 space-y-20">
+            <div className="px-4 md:px-10 lg:px-16 py-20 lg:py-40 space-y-20">
                 <h1
                     id="why-us"
                     className="text-primary text-3xl lg:text-5xl font-bold font-libre text-center"
