@@ -62,11 +62,20 @@ const Navbar = () => {
 
             <div className="px-4 md:px-10 lg:px-16 lg:hidden py-4 flex items-center justify-between">
                 <SearchBar hiddenOnLarge />
-                <div>
+                <div
+                    className={`transform transition-transform duration-300 ${isMenuOpen ? "rotate-90" : "rotate-0"
+                        }`}
+                >
                     {isMenuOpen ? (
-                        <IoClose className={iconClass} onClick={() => setIsMenuOpen(false)} />
+                        <IoClose
+                            className={iconClass}
+                            onClick={() => setIsMenuOpen(false)}
+                        />
                     ) : (
-                        <IoMenu className={iconClass} onClick={() => setIsMenuOpen(true)} />
+                        <IoMenu
+                            className={iconClass}
+                            onClick={() => setIsMenuOpen(true)}
+                        />
                     )}
                 </div>
             </div>
