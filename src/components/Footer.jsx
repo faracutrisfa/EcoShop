@@ -2,9 +2,11 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <div>
-            Ini Footer
-        </div>
+        <section>
+            <div className='px-4 md:px-10 lg:px-16 font-libre'>
+                INI FOOTER
+            </div>
+        </section>
     )
 }
 
