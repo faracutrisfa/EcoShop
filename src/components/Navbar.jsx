@@ -85,7 +85,7 @@ const Navbar = () => {
                 className="lg:flex justify-center hidden py-4 gap-2 text-grey-600"
             >
                 {navItems.map((item, index) => (
-                    <li key={index} className="px-4 py-2 font-semibold">
+                    <li key={index} className="px-4 py-2 font-semibold hover:border hover:bg-primary hover:text-white">
                         {item}
                     </li>
                 ))}
